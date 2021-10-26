@@ -3,10 +3,10 @@
 $black: #111;
 $white: #fff;
 $off-white: #ccc;
-$brand-main: #123;
-$brand-main-dark: #123;
-$brand-secondary: #123;
-$brand-secondary-dark: #123;
+$brand-main: #F72585;
+$brand-main-dark: #B5179E;
+$brand-secondary: #3F37C9;
+$brand-secondary-dark: #3A0CA3;
 
 // OPACITY
 $opacity-unfocused: 0.3;
@@ -16,3 +16,7 @@ $opacity-focused: 0.6;
 $spacing-small: 10px;
 $spacing-medium: 30px;
 $spacing-large: 50px;
+
+// ANIMATION SPEEDS
+$animation-fast: 0.3s;
+$animation-slow: 0.5s;

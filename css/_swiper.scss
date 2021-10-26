@@ -25,27 +25,37 @@
             padding-right: $spacing-medium;
         }
 
-        img {
+        .swiper-image {
+            overflow: hidden;
             height: 100%;
             width: 100%;
-            object-fit: cover;
-            object-position: center;
             z-index: 1;
 
-            &:hover {
-                transform: scale(1.05);
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition:  $animation-fast all ease-in-out;
             }
+
         }
 
         .image-filter {
             position: absolute;
             height: 100%;
             width: 100%;
-            background-color: rgba($brand-main-dark,$opacity-unfocused);
+            background-color: rgba($brand-main,$opacity-unfocused);
+            transition: $animation-fast all ease-in-out;
             z-index: 2;
+        }
 
-            &:hover {
-                background-color: black;
+        &.focused {
+            .image-filter {
+                background-color: rgba($brand-main-dark,$opacity-focused);
+            }
+            .swiper-image img {
+                transform: scale(1.08);
             }
         }
     }
@@ -53,10 +63,12 @@
     .swiper-button-prev, .swiper-button-next {
         top: 90% !important;
         color: $white;
-        animation: 0.3s ease-in-out;
-
+        animation: $animation-fast all ease-in-out;
+        margin-left: $spacing-large;
+        margin-right: $spacing-large;
         &:hover {
             color: $off-white;
         }
     }
+
 }

@@ -63,38 +63,50 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   padding-right: 30px;
 }
 
-.swiper.swiper-hero .swiper-slide img {
+.swiper.swiper-hero .swiper-slide .swiper-image {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.swiper.swiper-hero .swiper-slide .swiper-image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  z-index: 1;
-}
-
-.swiper.swiper-hero .swiper-slide img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .swiper.swiper-hero .swiper-slide .image-filter {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(17, 34, 51, 0.3);
+  background-color: rgba(247, 37, 133, 0.3);
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   z-index: 2;
 }
 
-.swiper.swiper-hero .swiper-slide .image-filter:hover {
-  background-color: black;
+.swiper.swiper-hero .swiper-slide.focused .image-filter {
+  background-color: rgba(181, 23, 158, 0.6);
+}
+
+.swiper.swiper-hero .swiper-slide.focused .swiper-image img {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
 }
 
 .swiper.swiper-hero .swiper-button-prev, .swiper.swiper-hero .swiper-button-next {
   top: 90% !important;
   color: #fff;
-  -webkit-animation: 0.3s ease-in-out;
-          animation: 0.3s ease-in-out;
+  -webkit-animation: 0.3s all ease-in-out;
+          animation: 0.3s all ease-in-out;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .swiper.swiper-hero .swiper-button-prev:hover, .swiper.swiper-hero .swiper-button-next:hover {
