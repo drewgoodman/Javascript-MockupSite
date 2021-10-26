@@ -1,0 +1,12 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding-left: $spacing-medium;
+    padding-top: $spacing-medium;
+
+    .logo {
+        width: 220px;
+        height: auto;
+    }
+}
